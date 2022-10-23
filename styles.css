@@ -303,16 +303,22 @@ h1 {
 }
 
 .my-image .profile {
+    position: relative;
+    margin: auto;
     display: flex;
     width: 400px;
     align-content: center;
     vertical-align: center;
+    border-radius: 2rem;
+    border-color: var(--secondary-color);
+    border-style: solid;
 }
 
 .my-image>.circle1 {
-    position: relative;
-    margin-left: 7rem;
+    position: absolute;
+    z-index: 2;
     margin-top: -36rem;
+    margin-left: 16rem;
     display: inline-block;
     padding: 18rem 16.5rem;
     border-radius: 1rem;
