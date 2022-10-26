@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
 @import url(./glitch.css);
 
 :root {
@@ -9,10 +10,9 @@
     --icons-color: #ffffff;
     --card-background: #f4f4f4;
     --weight-small: 400;
-    --weight-semibold: 600;
-    --weight-bold: 800;
-    --font-family-primary: Arial, sans-serif;
-    --font-family-secondary: "Roboto Mono", monospace;
+    --weight-medium: 500;
+    --weight-bold: 700;
+    --font-family-primary: "Roboto Mono", monospace;
 
 }
 
@@ -28,15 +28,21 @@ html {
     font-size: 62.5%;
     box-sizing: border-box;
     font-family: var(--font-family-primary);
+    font-weight: var(--weight-bold);
+
 }
 
 body {
     color: linen;
     background-color: black;
+    background-image: url(/assets/body_wallpaper.png);
+    background-repeat: repeat;
+    background-size: contain;
 }
 
 h2 {
     font-family: var(--font-family-primary);
+    font-weight: var(--weight-medium);
 }
 
 
@@ -44,6 +50,7 @@ h2 {
 a {
     text-decoration: none;
     color: linen;
+    font-weight: var(--weight-small);
 }
 
 .navbar {
@@ -52,13 +59,13 @@ a {
     justify-content: space-between;
     -moz-box-align: center;
     align-items: center;
-    position: fixed;
+    position: absolute;
     top: 0px;
-    /* z-index: 11; */
+    z-index: 11;
     padding: 0px 50px;
     width: 100%;
     height: 60px;
-    background-color: rgb(27, 27, 27);
+    background: transparent;
 }
 
 .menu-buttons {
@@ -93,13 +100,14 @@ a {
 .logo {
     display: inline-block;
     font-size: 2rem;
-    font-family: var(--font-family-secondary);
+    font-family: "Roboto Mono", monospace;
 }
 
 .logo h1 {
     font-size: 3.5rem;
     margin-left: 5rem;
     cursor:pointer;
+
 }
 
 .temp-btn {
@@ -142,12 +150,16 @@ a {
 
 /* WHOLE PAGE SETUP */
 
+
 .content {
     margin: 0px auto;
     width: 100%;
     max-width: 1600px;
     min-height: 100vh;
     padding: 0px 150px;
+    background-image: url(/assets/hero_wallpaper.png);
+    background-repeat: no-repeat;
+    background-size:contain;
 }
 
 .perm-social{
@@ -199,7 +211,8 @@ a {
     flex-direction: column;
     align-items: flex-start;
     min-height: 100vh;
-    padding: 0px;
+    margin: 1rem;
+    padding: 1rem;
 }
 
 .hero h1 {
@@ -211,7 +224,9 @@ a {
 .hero h2 {
     margin: 0px 0px 30px 4px;
     font-size: 5rem;
+    font-weight: var(--weight-bold);
     color: #ffff;
+    
 }
 
 .hero p {
@@ -226,13 +241,33 @@ a {
     max-width: 80rem;
 }
 
+.find-more.perm-btn {
+    display: inline-block;
+    padding: 0.75rem 1.9rem;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 2rem;
+    transition: 0.3s;
+    border-style: solid;
+    border-color: var(--primary-color);
+    z-index: 20;
+    color: #ffff;
+}
+
+.find-more .perm-btn:hover {
+    background-color: var(--primary-color);
+    color: black;
+}
+
 .learn-more {
-    margin: 0px 0px 30px 4px;
+    margin-left: 0rem;
+    margin-top: 0rem;
 }
 
 .learn-more a {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: var(--weight-bold);
+
 }
 
 /* WHO AM I SECTION */
@@ -306,7 +341,7 @@ h1 {
     position: relative;
     margin: auto;
     display: flex;
-    width: 400px;
+    width: 40rem;
     align-content: center;
     vertical-align: center;
     border-radius: 2rem;
@@ -317,14 +352,15 @@ h1 {
 .my-image>.circle1 {
     position: absolute;
     z-index: 2;
-    margin-top: -36rem;
-    margin-left: 16rem;
+    margin-top: -37rem;
+    margin-left: 12rem;
     display: inline-block;
-    padding: 18rem 16.5rem;
-    border-radius: 1rem;
+    width: 40rem;
+    height: 40rem;
+    border-radius: 2rem;
     border-style: solid;
     border-color: var(--secondary-color);
-    border-width: 1.5rem;
+    border-width: 1rem;
     z-index: -1;
 }
 
@@ -336,6 +372,9 @@ h1 {
     min-height: 100vh;
     margin: 1rem;
     padding:1rem;
+    background-image: url(/assets/Project_Page_Wallpaper.png);
+    background-repeat: repeat;
+    background-size: contain;
 }
 
 .project-container {
@@ -383,37 +422,44 @@ h1 {
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.5;
-    max-width: 80rem;
-    max-height: 30rem;
-    width: 100rem;
-    height: 60rem;
+    min-width: 60rem;
+    min-height: 30rem;
+    width: 90rem;
+    height: 40rem;
 
 }
 
 .project-image .external-links {
-    font-size: 4rem;
+    font-size: 4rem;;
     display: flex;
-    position: relative;
-    top: 15rem;
-    left: 30rem;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
-    width: 15rem;
+    justify-content:space-between ;
+    margin-top: 12rem;
+    margin-left: 4.5rem;
+    width: 80rem;
     opacity: 0;
 }
+
+
 
 .project-image:hover .external-links {
     font-size: 4rem;
     display: flex;
-    position: relative;
-    top: 15rem;
-    left: 30rem;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
-    width: 15rem;
+    justify-content: space-between;
+    margin-top: 12rem;
+    margin-left: 4.5rem;
+    width: 80rem;
     transition: 1s;
     opacity: 1;
 }
+
+.external-links:hover i{
+    cursor: pointer;
+}
+
 
 .project-image:hover {
     opacity: 1;
@@ -430,8 +476,8 @@ h1 {
     justify-content: center;
     align-items: center;
     margin: 2rem auto;
-    width: 60rem;
-    height: 15rem;
+    width: 70rem;
+    height: 20rem;
     border-style: solid;
     border-color: rgb(27, 27, 27);
     background-color: rgb(27, 27, 27);
@@ -439,15 +485,23 @@ h1 {
 
 .project-description h2 {
     font-family: var(--font-family-secondary);
-    font-size: 1.5rem;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6rem;
+    font-size: 1.8rem;
+    font-weight: 700;
     text-align: center;
 
 }
 
 .project-description p {
     font-family: var(--font-family-secondary);
-    font-size: 1.1rem;
+    font-size: 1.6rem;
+    font-weight: 600;
     text-align: center;
+    padding: 0.5rem;
+   
 }
 
 
@@ -458,11 +512,18 @@ h1 {
     -moz-box-align: center;
     align-items: center;
     list-style: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:0;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    color: rgb(13, 233, 159);
 }
 
 .projects .tech-stack li {
-    margin: 2rem 2rem;
+    margin-left: 2rem;
+    margin-bottom: 4rem;
 }
 
 /* CONTACT */
@@ -473,20 +534,22 @@ h1 {
     min-height: 100vh;
     margin: 1rem;
     padding: 1rem;
+    background:transparent;
 }
 
 .next-steps h1 {
     display: block;
     text-align: left;
-    font-family: var(--font-family-secondary);
+    font-family: var(--font-family-primary);
     font-size: 5rem;
+    margin-top: 1.2rem;
     margin-bottom: 1.5rem;
 }
 
 .next-steps h2 {
     display: flex;
     text-align: flex-start;
-    font-family: var(--font-family-secondary);
+    font-family: var(--font-family-primary);
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     color: var(--primary-color);
@@ -495,36 +558,38 @@ h1 {
 .next-steps h3 {
     display: inline-block;
     text-align: flex-start;
-    font-family: var(--font-family-secondary);
+    font-family: var(--font-family-primary);
     font-size: 3rem;
     margin-bottom: 1.5rem;
-    margin: auto;
-    max-width: 800px;
+    margin-top: 2rem;
+    max-width: 100rem;
 }
 
 .first-of-all p {
     display: flex;
     text-align: center;
-    font-family: var(--font-family-secondary);
+    font-family: var(--font-family-primary);
     font-size: 3rem;
     margin-top: 15rem;
     margin-bottom: 3rem;
     width: 100%
 }
 
-.next-steps .say-hi {
+.next-steps>.say-hi {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     padding: 0.3rem 0.3rem;
-    margin:auto;
+    margin-right: auto;
+    margin-left: 55rem;
     width: 15rem;
     height: 5rem;
     text-transform: uppercase;
     font-size: 2rem;
-    font-weight: 800;
+    font-weight: var(--weight-bold);
     border-style: solid;
+    border-radius: 3rem;
     border-color: var(--secondary-color);
     color: white;
     cursor:pointer;
@@ -534,6 +599,18 @@ h1 {
     background-color: var(--secondary-color);
     border-color: var(--secondary-color);
     color: black;
+}
+
+.connector {
+    width: 600px;
+    z-index: 25;
+    position: absolute;
+    display: inline-block;
+    left: 90rem;
+    top: 415rem;
+    
+
+    
 }
 
 /* Footer */
